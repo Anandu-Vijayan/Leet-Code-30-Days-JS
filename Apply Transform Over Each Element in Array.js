@@ -37,7 +37,7 @@ var map = function(arr, fn) {
     for(var i = 0; i < arr.length; i++) {
     result.push(fn(arr[i],i))
 }
-return result
+return result 
     
 };
 
