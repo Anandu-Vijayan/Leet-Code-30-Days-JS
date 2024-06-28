@@ -101,7 +101,7 @@ var myAtoi = function (s) {
 
     //Signedness
     if (s[i] === '+' || s[i] === '-') {
-        if (s[i] === '-') positive = false;
+        if (s[i] === '-') positive = false; 
         i++;
     }
 
