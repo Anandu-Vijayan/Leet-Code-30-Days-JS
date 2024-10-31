@@ -33,24 +33,26 @@
 // s consists of lowercase English letters.
 // 1 <= k <= s.length
 
-const vowels = "aeiou";
-const n = s.length;
-let start = 0;
-let sum = 0;
-let maxSum = 0;
-for (let i = 0; i < n; i++) {
+var maxVowels = function(s, k) {
+    const vowels = "aeiou";
+    const n = s.length;
+    let start = 0;
+    let sum = 0;
+    let maxSum = 0;
+    for (let i = 0; i < n; i++) {
 
-    if (vowels.includes(s[i])) {
-        sum += 1;
-    }
-
-    if (i - start + 1 === k) {
-        maxSum = Math.max(sum, maxSum);
-        if (vowels.includes(s[start])) {
-            sum--;
+        if (vowels.includes(s[i])) {
+            sum += 1;
         }
-        start++;
-    }
-}
 
-return maxSum;
+        if (i - start + 1 === k) {
+            maxSum = Math.max(sum, maxSum);
+            if (vowels.includes(s[start])) {
+                sum--;
+            }
+            start++;
+        }
+    }
+
+    return maxSum;
+};
