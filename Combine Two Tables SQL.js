@@ -69,6 +69,6 @@
 // addressId = 1 contains information about the address of personId = 2.
 
 
-SELECT P.firstName, P.lastName, A.city, A.state
-from person P LEFT JOIN Address A
-on P.personId = A.personId;
+"SELECT P.firstName, P.lastName, A.city, A.state"
+"from person P LEFT JOIN Address A"
+"on P.personId = A.personId"
