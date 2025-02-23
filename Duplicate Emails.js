@@ -44,7 +44,7 @@
 // +---------+
 // Explanation: a@b.com is repeated two times.
 
-SELECT EMAIL
+`SELECT EMAIL
 FROM PERSON
 GROUP BY EMAIL
-HAVING COUNT(*) > 1
+HAVING COUNT(*) > 1`
