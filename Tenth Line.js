@@ -26,4 +26,4 @@
 // 1. If the file contains less than 10 lines, what should you output?
 // 2. There's at least three different solutions. Try to explore all possibilities.
 
-awk 'NR==10' file.txt
+"awk 'NR==10' file.txt"
