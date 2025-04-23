@@ -30,7 +30,7 @@
 // Example 3:
 
 // Input: n = 2147483645
-
+  
 // Output: 30
 
 // Explanation:
