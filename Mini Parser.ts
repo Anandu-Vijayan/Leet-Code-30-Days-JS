@@ -35,6 +35,43 @@
 // All the values in the input are in the range [-106, 106].
 
 
+// Minimal NestedInteger class definition for TypeScript
+class NestedInteger {
+    private value: number | null = null;
+    private list: NestedInteger[] = [];
+
+    constructor(value?: number) {
+        if (value !== undefined) {
+            this.value = value;
+        }
+    }
+
+    isInteger(): boolean {
+        return this.value !== null;
+    }
+
+    getInteger(): number | null {
+        return this.value;
+    }
+
+    setInteger(value: number): void {
+        this.value = value;
+        this.list = [];
+    }
+
+    add(elem: NestedInteger): void {
+        if (this.value !== null) {
+            this.list = [];
+            this.value = null;
+        }
+        this.list.push(elem);
+    }
+
+    getList(): NestedInteger[] {
+        return this.list;
+    }
+}
+
 function build( list: number[] ): NestedInteger {
     const cur_list: NestedInteger = new NestedInteger();
 
