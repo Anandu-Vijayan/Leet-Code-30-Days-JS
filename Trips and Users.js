@@ -1,125 +1,125 @@
-262. Trips and Users
+// 262. Trips and Users
 
-Hard Topics
+// Hard Topics
 
-Companies
+// Companies
 
-Pandas Schema
+// Pandas Schema
 
-SQL Schema >
+// SQL Schema >
 
-Table: Trips
+// Table: Trips
 
-6
+// 6
 
-Column Name Type
+// Column Name Type
 
-id client_id
+// id client_id
 
-driver_id
+// driver_id
 
-city_id
+// city_id
 
-status
+// status
 
-request_at
+// request_at
 
-int int
+// int int
 
-int
+// int
 
-int
+// int
 
-enum
+// enum
 
-varchar
+// varchar
 
-request_at as "Day",
+// request_at as "Day",
 
-round(sum(status "Cancellation Rate"
+// round(sum(status "Cancellation Rate"
 
-'completed')/count(*),
+// 'completed')/count(*),
 
-from
+// from
 
-Trips where
+// Trips where
 
-client_id in (select users_id from
+// client_id in (select users_id from
 
-and driver_id in (select
+// and driver_id in (select
 
-10
+// 10
 
-Users where banned = "No")
+// Users where banned = "No")
 
-users_id from Users where banned "No") and request_at between
+// users_id from Users where banned "No") and request_at between
 
-"2013-10-01" and "2013-10-03"
+// "2013-10-01" and "2013-10-03"
 
-11 group by
+// 11 group by
 
-12
+// 12
 
-13
+// 13
 
-request_at order by
+// request_at order by
 
-request_at asc
+// request_at asc
 
-15
+// 15
 
-users_id
+// users_id
 
-banned
+// banned
 
-role
+// role
 
-int
+// int
 
-enum
+// enum
 
-enum
+// enum
 
-users_id is the primary key (column with unique
+// users_id is the primary key (column with unique
 
-values) for this table.
+// values) for this table.
 
-The table holds all users. Each user has a unique users_id, and role is an ENUM type of ('client',
+// The table holds all users. Each user has a unique users_id, and role is an ENUM type of ('client',
 
-'driver', 'partner').
+// 'driver', 'partner').
 
-banned is an ENUM (category) type of ('Yes', 'No').
+// banned is an ENUM (category) type of ('Yes', 'No').
 
-The cancellation rate is computed by dividing the number of canceled (by client or driver) requests with unbanned users by the total number of requests with unbanned users on that day.
+// The cancellation rate is computed by dividing the number of canceled (by client or driver) requests with unbanned users by the total number of requests with unbanned users on that day.
 
-Write a solution to find the cancellation rate of requests with unbanned users (both client and driver must not be banned) each day between "2013-10-01" and "2013-10-03" with at least one trip. Round
+// Write a solution to find the cancellation rate of requests with unbanned users (both client and driver must not be banned) each day between "2013-10-01" and "2013-10-03" with at least one trip. Round
 
-Cancellation Rate to two decimal points.
+// Cancellation Rate to two decimal points.
 
-Return the result table in any order.
+// Return the result table in any order.
 
-The result format is in the following example.
+// The result format is in the following example.
 
-Example 1:
+// Example 1:
 
-Input: Trips table:
+// Input: Trips table:
 
-| id | client_id | driver_id | city_id | status
+// | id | client_id | driver_id | city_id | status
 
-request_at
+// request_at
 
-1|1
+// 1|1
 
-10
+// 10
 
-completed
+// completed
 
-2013-10-01
+// 2013-10-01
 
-11
+// 11
 
-1
+// 1
 
-22
+// 22
 
-cancelled_by_driver
+// cancelled_by_driver
