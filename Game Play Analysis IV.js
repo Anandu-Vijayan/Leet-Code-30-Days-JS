@@ -49,7 +49,7 @@
 // Only the player with id 1 logged back in after the first day he had logged in so the answer is 1/3 = 0.33
 
 
-select round(count(distinct ac2.player_id)/count(distinct ac.player_id),2) as fraction  
+`select round(count(distinct ac2.player_id)/count(distinct ac.player_id),2) as fraction  
 from activity as ac1
 join (
     select player_id ,min(event_date) as min_date
@@ -58,4 +58,4 @@ join (
 ) as ac
 on ac1.player_id=ac.player_id and ac1.event_date = ac.min_date
 left join activity as ac2
-on ac.player_id=ac2.player_id and datediff(ac2.event_date, ac.min_date) = 1
+on ac.player_id=ac2.player_id and datediff(ac2.event_date, ac.min_date) = 1`
