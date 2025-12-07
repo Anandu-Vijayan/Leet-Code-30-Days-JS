@@ -58,7 +58,7 @@
 // The rows with ids 2 and 3 are not included because we need at least three consecutive ids.
 
 
-# Write your MySQL query statement below
+// # Write your MySQL query statement below
 
 `WITH stadium_with_flag AS (
     SELECT 
